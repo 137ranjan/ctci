@@ -8,7 +8,7 @@ public class RotateMatrix {
         };
 
         try {
-            rotateMatrix(matrix);
+            rotateMatrix2(matrix);
         } catch (UnsupportedOperationException exception) {
             System.out.println(exception.getMessage());
             return;
@@ -19,6 +19,38 @@ public class RotateMatrix {
                 System.out.print(matrix[i][j] + " ");
             }
             System.out.println();
+        }
+    }
+
+    private static void rotateMatrix2(int[][] matrix) {
+        if (matrix.length == 0 || matrix.length != matrix[0].length) {
+            throw new UnsupportedOperationException("Not a square matrix");
+        }
+        int l = 0;
+        int r = matrix.length - 1;
+
+        while (l < r) {
+            for (int i = 0; i < r - l; i++) {
+                int top = l;
+                int bottom = r;
+
+                // save topLeft
+                int topLeft = matrix[top][l + i];
+
+                // move bottomLeft to topLeft
+                matrix[top][l + i] = matrix[bottom - i][l];
+
+                // move bottomRight to bottomLeft
+                matrix[bottom - i][l] = matrix[bottom][r - i];
+
+                // move topRight to bottomRight
+                matrix[bottom][r - i] = matrix[top + i][r];
+
+                // move topLeft to topRight
+                matrix[top + i][r] = topLeft;
+            }
+            l++;
+            r--;
         }
     }
 
