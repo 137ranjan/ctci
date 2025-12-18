@@ -1,3 +1,5 @@
+package arraysandstrings;
+
 public class UrlReplace {
     public static void main(String[] args) {
         String input = "Mr John Smith    ";

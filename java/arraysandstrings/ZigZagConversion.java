@@ -1,4 +1,6 @@
-class ZigZagConvresion {
+package arraysandstrings;
+
+class ZigZagConversion {
     public static void main(String[] args) {
         String input = "PAYPALISHIRING";
         System.out.println(convert(input, 4));

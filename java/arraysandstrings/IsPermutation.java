@@ -1,3 +1,5 @@
+package arraysandstrings;
+
 public class IsPermutation {
     public static void main(String[] args) {
         System.out.println(isPermutation("apple", "paple"));
