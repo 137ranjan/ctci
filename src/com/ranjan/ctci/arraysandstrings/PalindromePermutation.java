@@ -1,4 +1,4 @@
-package arraysandstrings;
+package com.ranjan.ctci.arraysandstrings;
 
 import java.util.HashMap;
 import java.util.Map;

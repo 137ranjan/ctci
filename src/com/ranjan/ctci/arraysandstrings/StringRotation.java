@@ -1,4 +1,4 @@
-package arraysandstrings;
+package com.ranjan.ctci.arraysandstrings;
 
 public class StringRotation {
 

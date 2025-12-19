@@ -1,4 +1,4 @@
-package arraysandstrings;
+package com.ranjan.ctci.arraysandstrings;
 
 class ZigZagConversion {
     public static void main(String[] args) {

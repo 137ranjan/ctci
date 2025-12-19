@@ -1,4 +1,4 @@
-package linkedlists;
+package com.ranjan.ctci.linkedlists;
 
 public class Node {
     Node next;

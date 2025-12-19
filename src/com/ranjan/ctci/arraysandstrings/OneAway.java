@@ -1,4 +1,4 @@
-package arraysandstrings;
+package com.ranjan.ctci.arraysandstrings;
 
 import java.util.HashSet;
 import java.util.Scanner;

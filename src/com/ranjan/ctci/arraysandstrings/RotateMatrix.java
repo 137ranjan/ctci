@@ -1,4 +1,4 @@
-package arraysandstrings;
+package com.ranjan.ctci.arraysandstrings;
 
 public class RotateMatrix {
     public static void main(String[] args) {
