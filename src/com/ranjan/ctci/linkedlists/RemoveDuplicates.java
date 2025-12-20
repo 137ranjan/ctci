@@ -4,22 +4,38 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class RemoveDuplicates {
-    public Node removeDuplicates(Node head){
+
+    // with space complexity O(n) and time complexity O(n)
+    public Node removeDuplicates(Node head) {
         Set<Integer> set = new HashSet<>();
-        Node curr = head;
-        Node prev = null;
-        while ( curr != null && curr.next != null){
-            if (set.contains(curr.data)){
-                prev.next = curr.next;
-                curr = curr.next.next;
-            }else {
-                set.add(curr.data);
-                prev = curr;
-                curr = curr.next;
+        Node current = head;
+        Node previous = null;
+        while (current != null) {
+            if (set.contains(current.data)) {
+                previous.next = current.next;
+            } else {
+                set.add(current.data);
+                previous = current;
             }
+            current = current.next;
         }
-        if (curr != null && set.contains(curr.data)){
-            curr = null;
+        return head;
+    }
+
+    // with O(1) space complexity and O(n^2) time complexity
+    public Node removeDuplicates2(Node head) {
+        Node current = head;
+
+        while (current != null) {
+            Node runner = current;
+            while (runner.next != null) {
+                if (current.data == runner.next.data) {
+                    runner.next = runner.next.next;
+                } else {
+                    runner = runner.next;
+                }
+            }
+            current = current.next;
         }
         return head;
     }

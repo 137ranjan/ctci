@@ -1,6 +1,9 @@
-package com.ranjan.ctci.linkedlists;
+package com.ranjan.ctci;
 
-public class TestRunner {
+import com.ranjan.ctci.linkedlists.Node;
+import com.ranjan.ctci.linkedlists.RemoveDuplicates;
+
+public class Runner {
 
 	public static void main(String[] args) {
 		Node head = new Node(1);
@@ -18,7 +21,7 @@ public class TestRunner {
 		head.appendToTail(4);
 		head.print();
 		RemoveDuplicates removeDuplicates = new RemoveDuplicates();
-		head = removeDuplicates.removeDuplicates(head);
+		head = removeDuplicates.removeDuplicates2(head);
 		head.print();
 	}
 
