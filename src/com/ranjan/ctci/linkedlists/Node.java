@@ -8,6 +8,22 @@ public class Node {
         this.data = data;
     }
 
+    public Node getNext() {
+        return next;
+    }
+
+    public void setNext(Node next) {
+        this.next = next;
+    }
+
+    public int getData() {
+        return data;
+    }
+
+    public void setData(int data) {
+        this.data = data;
+    }
+
     public void appendToTail(int data) {
         Node end = new Node(data);
         Node curr = this;
@@ -31,13 +47,13 @@ public class Node {
         }
         return head;
     }
-    
+
     public void print() {
-    	Node curr = this;
-    	while(curr != null) {
-    		System.out.print(curr.data + "->");
-    		curr = curr.next;
-    	}
-    	System.out.println("null");
+        Node curr = this;
+        while (curr != null) {
+            System.out.print(curr.data + "->");
+            curr = curr.next;
+        }
+        System.out.println("null");
     }
 }
