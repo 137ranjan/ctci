@@ -1,6 +1,6 @@
 package com.ranjan.ctci;
 
-import com.ranjan.ctci.linkedlists.KthToLast;
+import com.ranjan.ctci.linkedlists.DeleteMiddleNode;
 import com.ranjan.ctci.linkedlists.Node;
 
 public class CtciApp {
@@ -12,10 +12,12 @@ public class CtciApp {
         head.appendToTail(4);
         head.appendToTail(5);
         head.print();
-        int k = 0;
-        KthToLast kthToLastObj = new KthToLast();
-        Node kthToLast = kthToLastObj.kthToLast(head, k);
-        System.out.println("Kth To Last item for k = " + k + "  is : " + kthToLast.getData() + " " + kthToLast);
+        DeleteMiddleNode deleteMiddleNode= new DeleteMiddleNode();
+        try {
+            deleteMiddleNode.deleteMiddleNode(head.getNext().getNext());
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
         head.print();
     }
 }
