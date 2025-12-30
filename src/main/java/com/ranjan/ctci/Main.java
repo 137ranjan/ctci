@@ -3,7 +3,7 @@ package com.ranjan.ctci;
 import com.ranjan.ctci.linkedlists.DeleteMiddleNode;
 import com.ranjan.ctci.linkedlists.Node;
 
-public class CtciApp {
+public class Main {
 
     public static void main(String[] args) {
         Node head = new Node(1);
