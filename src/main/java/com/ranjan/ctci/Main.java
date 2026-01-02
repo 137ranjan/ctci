@@ -1,23 +1,19 @@
 package com.ranjan.ctci;
 
-import com.ranjan.ctci.linkedlists.DeleteMiddleNode;
-import com.ranjan.ctci.linkedlists.Node;
+import com.ranjan.ctci.linkedlists.LinkedListNode;
+import com.ranjan.ctci.linkedlists.Partition;
 
 public class Main {
 
     public static void main(String[] args) {
-        Node head = new Node(1);
-        head.appendToTail(2);
-        head.appendToTail(3);
-        head.appendToTail(4);
+        LinkedListNode head = new LinkedListNode(1);
         head.appendToTail(5);
+        head.appendToTail(3);
+        head.appendToTail(2);
+        head.appendToTail(4);
         head.print();
-        DeleteMiddleNode deleteMiddleNode= new DeleteMiddleNode();
-        try {
-            deleteMiddleNode.deleteMiddleNode(head.getNext().getNext());
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
+        Partition partitionObj = new Partition();
+        head = partitionObj.partitionAroundX(head, 3);
         head.print();
     }
 }

@@ -1,18 +1,18 @@
 package com.ranjan.ctci.linkedlists;
 
-public class Node {
-    Node next;
+public class LinkedListNode {
+    LinkedListNode next;
     int data;
 
-    public Node(int data) {
+    public LinkedListNode(int data) {
         this.data = data;
     }
 
-    public Node getNext() {
+    public LinkedListNode getNext() {
         return next;
     }
 
-    public void setNext(Node next) {
+    public void setNext(LinkedListNode next) {
         this.next = next;
     }
 
@@ -25,16 +25,16 @@ public class Node {
     }
 
     public void appendToTail(int data) {
-        Node end = new Node(data);
-        Node curr = this;
+        LinkedListNode end = new LinkedListNode(data);
+        LinkedListNode curr = this;
         while (curr.next != null) {
             curr = curr.next;
         }
         curr.next = end;
     }
 
-    public Node deleteNode(Node head, int data) {
-        Node curr = head;
+    public LinkedListNode deleteNode(LinkedListNode head, int data) {
+        LinkedListNode curr = head;
         if (curr.data == data) {
             return curr.next;
         }
@@ -49,7 +49,7 @@ public class Node {
     }
 
     public void print() {
-        Node curr = this;
+        LinkedListNode curr = this;
         while (curr != null) {
             System.out.print(curr.data + "->");
             curr = curr.next;

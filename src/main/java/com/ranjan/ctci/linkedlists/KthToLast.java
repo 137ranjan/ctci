@@ -1,9 +1,9 @@
 package com.ranjan.ctci.linkedlists;
 
 public class KthToLast {
-    public Node kthToLast(Node head, int k) {
-        Node first = head;
-        Node second = head;
+    public LinkedListNode kthToLast(LinkedListNode head, int k) {
+        LinkedListNode first = head;
+        LinkedListNode second = head;
         int count = 0;
 
         while (first.next != null && count < k) {
