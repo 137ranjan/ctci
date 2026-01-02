@@ -13,7 +13,7 @@ public class Main {
         head.appendToTail(4);
         head.print();
         Partition partitionObj = new Partition();
-        head = partitionObj.partitionAroundX(head, 3);
+        head = partitionObj.partitionAroundX2(head, 3);
         head.print();
     }
 }
