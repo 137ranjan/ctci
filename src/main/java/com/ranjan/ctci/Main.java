@@ -1,7 +1,7 @@
 package com.ranjan.ctci;
 
+import com.ranjan.ctci.linkedlists.Intersection;
 import com.ranjan.ctci.linkedlists.LinkedListNode;
-import com.ranjan.ctci.linkedlists.Palindrome;
 
 public class Main {
 
@@ -15,9 +15,14 @@ public class Main {
         LinkedListNode l2 = new LinkedListNode(1);
         l2.setNext(new LinkedListNode(2));
         l2.getNext().setNext(new LinkedListNode(2));
-        l2.getNext().getNext().setNext(new LinkedListNode(1));
+        l2.getNext().getNext().setNext(l1.getNext().getNext());
 
-        Palindrome palindromeObj = new Palindrome();
-        System.out.println(palindromeObj.isPalindrome2(l1));
+        Intersection intersectionObj = new Intersection();
+        LinkedListNode intersectingNode = intersectionObj.findIntersection2(l1, l2);
+        if (intersectingNode == null) {
+            System.out.println("No intersection.");
+        } else {
+            System.out.println(intersectingNode.getData());
+        }
     }
 }
