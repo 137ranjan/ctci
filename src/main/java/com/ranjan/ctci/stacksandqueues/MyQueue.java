@@ -3,7 +3,7 @@ package com.ranjan.ctci.stacksandqueues;
 import java.util.NoSuchElementException;
 
 public class MyQueue<T> {
-    public static class QueueNode<T> {
+    private static class QueueNode<T> {
         private final T data;
         private QueueNode<T> next;
 
