@@ -1,24 +1,20 @@
 package com.ranjan.ctci;
 
-import com.ranjan.ctci.linkedlists.LinkedListNode;
-import com.ranjan.ctci.linkedlists.LoopDetection;
+import com.ranjan.ctci.stacksandqueues.StackWithMin2;
 
 public class Main {
 
     public static void main(String[] args) {
-        LinkedListNode l1 = new LinkedListNode(1);
-        l1.setNext(new LinkedListNode(2));
-        l1.getNext().setNext(new LinkedListNode(3));
-        l1.getNext().getNext().setNext(new LinkedListNode(2));
-        l1.getNext().getNext().getNext().setNext(new LinkedListNode(1));
-        //l1.getNext().getNext().getNext().getNext().setNext(l1.getNext().getNext());
-
-        LoopDetection loopDetectionObj = new LoopDetection();
-        LinkedListNode loopBeginning = loopDetectionObj.findBeginning(l1);
-        if (loopBeginning == null) {
-            System.out.println("No loop.");
-        } else {
-            System.out.println("Loop begins at : " + loopBeginning.getData());
-        }
+        StackWithMin2 stackWithMin = new StackWithMin2();
+        stackWithMin.push(5);
+        stackWithMin.push(6);
+        stackWithMin.push(3);
+        stackWithMin.push(7);
+        stackWithMin.pop();
+        int min = stackWithMin.min();
+        System.out.println("Minimum = " + min);
+        stackWithMin.pop();
+        min = stackWithMin.min();
+        System.out.println("Minimum = " + min);
     }
 }
