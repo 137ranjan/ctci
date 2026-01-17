@@ -1,26 +1,25 @@
 package com.ranjan.ctci;
 
-import com.ranjan.ctci.stacksandqueues.SetOfStacks2;
+import com.ranjan.ctci.stacksandqueues.MyQueue2;
 
 public class Main {
 
     public static void main(String[] args) {
-        SetOfStacks2 setOfStacks = new SetOfStacks2(3);
-        setOfStacks.push(5);
-        setOfStacks.push(6);
-        setOfStacks.push(3);
-        setOfStacks.push(7);
-        setOfStacks.push(8);
-        setOfStacks.push(9);
-        System.out.println("popped element : " + setOfStacks.pop());
-//        System.out.println("isEmpty = " + setOfStacks.isEmpty());
-//        System.out.println("peek() = " + setOfStacks.peek());
-        System.out.println("popped element : " + setOfStacks.pop());
-        System.out.println("popped element : " + setOfStacks.pop());
-        System.out.println("popped element : " + setOfStacks.pop());
-        System.out.println("popped element : " + setOfStacks.pop());
-        System.out.println("popped element : " + setOfStacks.pop());
-        System.out.println("popped element : " + setOfStacks.pop());
+        MyQueue2<Character> myQueue2 = new MyQueue2<>();
+        myQueue2.add('a');
+        myQueue2.add('b');
+        myQueue2.add('c');
+        myQueue2.add('d');
+        System.out.println(myQueue2.remove());
+        myQueue2.add('e');
+        System.out.println(myQueue2.remove());
+        myQueue2.add('f');
+        System.out.println(myQueue2.peek());
+        System.out.println(myQueue2.remove());
+        System.out.println(myQueue2.remove());
+        System.out.println(myQueue2.remove());
+        System.out.println(myQueue2.remove());
+        System.out.println(myQueue2.remove());
 
     }
 }
