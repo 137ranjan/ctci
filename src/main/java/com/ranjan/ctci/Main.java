@@ -1,25 +1,25 @@
 package com.ranjan.ctci;
 
 import com.ranjan.ctci.stacksandqueues.MyQueue2;
+import com.ranjan.ctci.stacksandqueues.SortStack;
+
+import java.util.Stack;
 
 public class Main {
 
     public static void main(String[] args) {
-        MyQueue2<Character> myQueue2 = new MyQueue2<>();
-        myQueue2.add('a');
-        myQueue2.add('b');
-        myQueue2.add('c');
-        myQueue2.add('d');
-        System.out.println(myQueue2.remove());
-        myQueue2.add('e');
-        System.out.println(myQueue2.remove());
-        myQueue2.add('f');
-        System.out.println(myQueue2.peek());
-        System.out.println(myQueue2.remove());
-        System.out.println(myQueue2.remove());
-        System.out.println(myQueue2.remove());
-        System.out.println(myQueue2.remove());
-        System.out.println(myQueue2.remove());
+        Stack<Integer> stack = new Stack<>();
+        stack.push(9);
+        stack.push(1);
+        stack.push(8);
+        stack.push(2);
+        stack.push(7);
+        stack.push(3);
+        stack.push(7);
+        stack.push(4);
+        SortStack sortStack = new SortStack();
+        sortStack.sort(stack);
+        System.out.println(stack);
 
     }
 }
