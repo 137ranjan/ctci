@@ -1,6 +1,5 @@
 package com.ranjan.ctci;
 
-import com.ranjan.ctci.stacksandqueues.MyQueue2;
 import com.ranjan.ctci.stacksandqueues.SortStack;
 
 import java.util.Stack;
@@ -20,6 +19,5 @@ public class Main {
         SortStack sortStack = new SortStack();
         sortStack.sort(stack);
         System.out.println(stack);
-
     }
 }
