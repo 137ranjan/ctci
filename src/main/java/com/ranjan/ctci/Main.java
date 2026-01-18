@@ -1,23 +1,24 @@
 package com.ranjan.ctci;
 
-import com.ranjan.ctci.stacksandqueues.SortStack;
-
-import java.util.Stack;
+import com.ranjan.ctci.treesandgraphs.TreeNode;
+import com.ranjan.ctci.treesandgraphs.TreeTraversals;
 
 public class Main {
 
     public static void main(String[] args) {
-        Stack<Integer> stack = new Stack<>();
-        stack.push(9);
-        stack.push(1);
-        stack.push(8);
-        stack.push(2);
-        stack.push(7);
-        stack.push(3);
-        stack.push(7);
-        stack.push(4);
-        SortStack sortStack = new SortStack();
-        sortStack.sort(stack);
-        System.out.println(stack);
+        TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(3);
+        root.left.left = new TreeNode(4);
+        root.left.right = new TreeNode(5);
+        root.right.left = new TreeNode(6);
+        root.right.right = new TreeNode(7);
+
+        TreeTraversals treeTraversals = new TreeTraversals();
+        treeTraversals.inOrderTraversal(root);
+        System.out.println();
+        treeTraversals.preOrderTraversal(root);
+        System.out.println();
+        treeTraversals.postOrderTraversal(root);
     }
 }
