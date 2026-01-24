@@ -1,24 +1,34 @@
 package com.ranjan.ctci;
 
-import com.ranjan.ctci.treesandgraphs.TreeNode;
-import com.ranjan.ctci.treesandgraphs.TreeTraversals;
+import com.ranjan.ctci.treesandgraphs.GraphNode;
+import com.ranjan.ctci.treesandgraphs.RouteBetweenNodes;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
-        TreeNode root = new TreeNode(1);
-        root.left = new TreeNode(2);
-        root.right = new TreeNode(3);
-        root.left.left = new TreeNode(4);
-        root.left.right = new TreeNode(5);
-        root.right.left = new TreeNode(6);
-        root.right.right = new TreeNode(7);
+        List<GraphNode> graph = new ArrayList<>();
+        GraphNode firstNode = new GraphNode();
+        GraphNode secondNode = new GraphNode();
+        GraphNode thirdNode = new GraphNode();
+        GraphNode fourthNode = new GraphNode();
+        GraphNode fifthNode = new GraphNode();
+        GraphNode sixthNode = new GraphNode();
 
-        TreeTraversals treeTraversals = new TreeTraversals();
-        treeTraversals.inOrderTraversal(root);
-        System.out.println();
-        treeTraversals.preOrderTraversal(root);
-        System.out.println();
-        treeTraversals.postOrderTraversal(root);
+        fifthNode.adjacent.add(sixthNode);
+        thirdNode.adjacent.add(fourthNode);
+        secondNode.adjacent.add(thirdNode);
+        secondNode.adjacent.add(fourthNode);
+        firstNode.adjacent.add(secondNode);
+
+        graph = Arrays.asList(firstNode, secondNode, thirdNode, fourthNode, fifthNode, sixthNode);
+
+        RouteBetweenNodes routeBetweenNodes = new RouteBetweenNodes();
+        System.out.println(routeBetweenNodes.search(graph, firstNode, fifthNode));
+
+
     }
 }
