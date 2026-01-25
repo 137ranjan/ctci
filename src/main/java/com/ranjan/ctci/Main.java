@@ -33,5 +33,8 @@ public class Main {
         System.out.println();
         CheckBalanced checkBalanced = new CheckBalanced();
         System.out.println(checkBalanced.isBalanced2(root));
+
+        ValidateBST validateBST = new ValidateBST();
+        System.out.println(validateBST.checkBST(root));
     }
 }
