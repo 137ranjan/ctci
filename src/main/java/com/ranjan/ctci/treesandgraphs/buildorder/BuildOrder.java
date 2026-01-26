@@ -1,4 +1,4 @@
-package com.ranjan.ctci.treesandgraphs.BuildOrder;
+package com.ranjan.ctci.treesandgraphs.buildorder;
 
 import java.util.List;
 

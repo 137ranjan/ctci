@@ -1,7 +1,7 @@
 package com.ranjan.ctci;
 
-import com.ranjan.ctci.treesandgraphs.BuildOrder.BuildOrder;
-import com.ranjan.ctci.treesandgraphs.BuildOrder.Project;
+import com.ranjan.ctci.treesandgraphs.buildorder.BuildOrder;
+import com.ranjan.ctci.treesandgraphs.buildorder.Project;
 
 public class Main {
 
