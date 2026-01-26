@@ -6,6 +6,10 @@ import java.util.List;
 import java.util.Map;
 
 public class Project {
+    public enum State {COMPLETE, PARTIAL, BLANK}
+
+    ;
+    private State state = State.BLANK;
     private List<Project> children = new ArrayList<>();
     private Map<String, Project> map = new HashMap<>();
     private String name;
@@ -41,5 +45,13 @@ public class Project {
 
     public int getNumberOfDependencies() {
         return dependencies;
+    }
+
+    public State getState() {
+        return state;
+    }
+
+    public void setState(State state) {
+        this.state = state;
     }
 }

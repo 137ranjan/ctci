@@ -1,7 +1,9 @@
 package com.ranjan.ctci;
 
-import com.ranjan.ctci.treesandgraphs.buildorder.BuildOrder;
 import com.ranjan.ctci.treesandgraphs.buildorder.Project;
+import com.ranjan.ctci.treesandgraphs.buildorder2.BuildOrder2;
+
+import java.util.Stack;
 
 public class Main {
 
@@ -15,10 +17,10 @@ public class Main {
                 {"d", "c"}
         };
 
-        BuildOrder buildOrder = new BuildOrder();
-        Project[] order = buildOrder.findBuildOrder(projects, dependencies);
-        for (Project project : order) {
-            System.out.print(project.getName() + ", ");
+        BuildOrder2 buildOrder = new BuildOrder2();
+        Stack<Project> order = buildOrder.findBuildOrder(projects, dependencies);
+        while (!order.isEmpty()) {
+            System.out.print(order.pop().getName() + ", ");
         }
     }
 }
